@@ -1,7 +1,7 @@
 // Set constraints for the video stream
 // facing mode: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/facingMode
-//var constraints = { video: { facingMode: "environment" }, audio: false };
-var constraints = { video: { facingMode: "user" }, audio: false };
+var constraints = { video: { facingMode: "environment" }, audio: false };
+//var constraints = { video: { facingMode: "user" }, audio: false };
 var track = null;
 
 // Define constants
@@ -40,7 +40,7 @@ window.addEventListener("load", cameraStart, false);
 // Install ServiceWorker
 if ('serviceWorker' in navigator) {
   console.log('CLIENT: service worker registration in progress.');
-  navigator.serviceWorker.register( 'part-2/sw.js' , { scope : ' ' } ).then(function() {
+  navigator.serviceWorker.register( 'sw.js' , { scope : ' ' } ).then(function() {
     console.log('CLIENT: service worker registration complete.');
   }, function() {
     console.log('CLIENT: service worker registration failure.');
