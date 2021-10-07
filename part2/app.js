@@ -1,5 +1,6 @@
 // Set constraints for the video stream
-var constraints = { video: { facingMode: "user" }, audio: false };
+// facing mode: https://developer.mozilla.org/en-US/docs/Web/API/MediaTrackConstraints/facingMode
+var constraints = { video: { facingMode: "environment" }, audio: false };
 var track = null;
 
 // Define constants
